@@ -10,10 +10,8 @@
       name="description" 
       content="Taller mecánico y lavado de autos en Av. Pedro de Valdivia 5439, Ñuñoa. Más de 50 años de experiencia en mantención, diagnóstico computarizado y atención honesta." 
     />
-    <meta name="keywords" content="taller mecanico ñuñoa, mantencion preventiva auto, diagnostico computarizado santiago, frenos suspension ñuñoa, lavado de autos pedro de valdivia, miguel garate automotriz" />
     <meta name="author" content="Miguel Gárate O. Servicio Automotriz" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://miguelgarate.cl/" />
 
     <!-- Open Graph / Redes Sociales y WhatsApp -->
     <meta property="og:type" content="website" />
@@ -38,6 +36,14 @@
     />
     <meta name="twitter:image" content="/images/hero-horizontal.webp" />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#0B0B0B" />
+
+    <!-- Precarga del hero (se carga por CSS, así el LCP se descubre antes) -->
+    <link rel="preload" as="image" href="/images/hero-vertical.webp" media="(max-width: 767px)" />
+    <link rel="preload" as="image" href="/images/hero-horizontal.webp" media="(min-width: 768px)" />
+
     <!-- Google Fonts con Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,13 +60,12 @@
       "name": "Miguel Gárate O. Servicio Automotriz",
       "image": "/images/hero-horizontal.webp",
       "description": "Taller mecánico y lavado de autos en Ñuñoa con más de 50 años de trayectoria. Mecánica general, diagnóstico computarizado, mantenciones preventivas y lavado.",
-      "telephone": "+56 9 XXXX XXXX",
+      "telephone": "+56994078340",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Av. Pedro de Valdivia 5439",
         "addressLocality": "Ñuñoa",
         "addressRegion": "Región Metropolitana",
-        "postalCode": "7750000",
         "addressCountry": "CL"
       },
       "geo": {
@@ -68,6 +73,7 @@
         "latitude": -33.4750,
         "longitude": -70.5980
       },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Miguel+G%C3%A1rate+O.+Servicio+Automotriz%2C+Av.+Pedro+de+Valdivia+5439%2C+%C3%91u%C3%B1oa",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -79,9 +85,25 @@
       "priceRange": "$$",
       "paymentAccepted": "Efectivo, Transferencia, Tarjetas de Débito y Crédito",
       "currenciesAccepted": "CLP",
-      "areaServed": "Ñuñoa, Providencia, Macul, Santiago"
+      "areaServed": [
+        { "@type": "City", "name": "Ñuñoa" },
+        { "@type": "City", "name": "Providencia" },
+        { "@type": "City", "name": "Macul" },
+        { "@type": "City", "name": "Santiago" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios del taller",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantención preventiva" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diagnóstico computarizado" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Frenos y suspensión" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lavado interior y exterior" } }
+        ]
+      }
     }
     </script>
+    <!-- TODO: agregar "sameAs" con la ficha de Google Business Profile e Instagram cuando existan -->
   </head>
   <body>
 
@@ -102,7 +124,7 @@
 
         <!-- Botón único hacia WhatsApp -->
         <a 
-          href="https://wa.me/569XXXXXXXX?text=Hola%2C%20quiero%20hacer%20una%20consulta%20para%20mi%20auto" 
+          href="https://wa.me/56994078340?text=Hola%2C%20quiero%20hacer%20una%20consulta%20para%20mi%20auto" 
           class="btn btn-gold btn-sm header-btn"
           target="_blank" 
           rel="noopener noreferrer"
@@ -113,7 +135,7 @@
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
           </svg>
           <span class="btn-text-full">Escríbenos por WhatsApp</span>
-          <span style="display: none;" class="btn-text-mobile">WhatsApp</span>
+          <span class="btn-text-mobile">WhatsApp</span>
         </a>
       </div>
     </header>
@@ -137,7 +159,7 @@
 
             <div class="hero-actions">
               <a 
-                href="https://wa.me/569XXXXXXXX?text=Hola%2C%20quiero%20agendar%20una%20mantenci%C3%B3n%20para%20mi%20auto" 
+                href="https://wa.me/56994078340?text=Hola%2C%20quiero%20agendar%20una%20mantenci%C3%B3n%20para%20mi%20auto" 
                 class="btn btn-gold"
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -267,7 +289,7 @@
                   Una mantención a tiempo evita fallas y prolonga la vida de tu auto. Cambio de aceite, filtros y chequeo de fluidos.
                 </p>
                 <a 
-                  href="https://wa.me/569XXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20una%20mantenci%C3%B3n%20preventiva%20para%20mi%20auto" 
+                  href="https://wa.me/56994078340?text=Hola%2C%20quiero%20consultar%20por%20una%20mantenci%C3%B3n%20preventiva%20para%20mi%20auto" 
                   class="btn btn-service"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -302,7 +324,7 @@
                   Encontramos el problema con escáner profesional, sin adivinar. Lectura de códigos y sensores de motor.
                 </p>
                 <a 
-                  href="https://wa.me/569XXXXXXXX?text=Hola%2C%20necesito%20un%20diagn%C3%B3stico%20computarizado%20para%20mi%20auto" 
+                  href="https://wa.me/56994078340?text=Hola%2C%20necesito%20un%20diagn%C3%B3stico%20computarizado%20para%20mi%20auto" 
                   class="btn btn-service"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -336,7 +358,7 @@
                   Revisión y reparación para que frenes y manejes seguro. Rectificación de discos, pastillas y amortiguadores.
                 </p>
                 <a 
-                  href="https://wa.me/569XXXXXXXX?text=Hola%2C%20quiero%20revisar%20los%20frenos%20y%20suspensi%C3%B3n%20de%20mi%20auto" 
+                  href="https://wa.me/56994078340?text=Hola%2C%20quiero%20revisar%20los%20frenos%20y%20suspensi%C3%B3n%20de%20mi%20auto" 
                   class="btn btn-service"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -369,7 +391,7 @@
                   Tu auto limpio mientras tú trabajas o haces tus cosas. Aspirado a fondo, limpieza de tapiz y brillo exterior.
                 </p>
                 <a 
-                  href="https://wa.me/569XXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20el%20lavado%20interior%20y%20exterior%20para%20mi%20auto" 
+                  href="https://wa.me/56994078340?text=Hola%2C%20quiero%20consultar%20por%20el%20lavado%20interior%20y%20exterior%20para%20mi%20auto" 
                   class="btn btn-service"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -432,7 +454,7 @@
               </ul>
 
               <a 
-                href="https://wa.me/569XXXXXXXX?text=Hola%2C%20quiero%20hacer%20una%20consulta%20directa%20al%20taller" 
+                href="https://wa.me/56994078340?text=Hola%2C%20quiero%20hacer%20una%20consulta%20directa%20al%20taller" 
                 class="btn btn-gold"
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -517,64 +539,10 @@
       </section>
 
       <!-- ======================================================================
-           7. TESTIMONIOS (Reseñas Reales)
-           NOTA: Marcado para revisión con el cliente.
-           Si no hay reseñas disponibles, ocultar esta sección comentándola o con display:none.
+           7. TESTIMONIOS - OCULTO hasta contar con reseñas reales de Google.
+           Para reactivar: crear una sección .testimonials-section con 3 tarjetas
+           .testimonial-card (cita textual + nombre autorizado por el cliente).
            ====================================================================== -->
-      <!-- INICIO SECCIÓN TESTIMONIOS -->
-      <section class="testimonials-section" aria-labelledby="testimonials-title">
-        <div class="container">
-          <div class="section-header reveal-on-scroll" style="margin-bottom: 2rem;">
-            <span class="section-kicker">La opinión de nuestros vecinos</span>
-            <h2 id="testimonials-title" class="section-title">Clientes que confían en nosotros</h2>
-            <p class="section-desc">
-              La confianza se construye con décadas de trabajo honesto en Ñuñoa.
-            </p>
-          </div>
-
-          <div class="testimonials-grid">
-            <!-- Espacio 1 -->
-            <div class="testimonial-card reveal-on-scroll">
-              <div>
-                <span class="testimonial-pending-note">[PENDIENTE: Reseña real 1 de Google Maps]</span>
-                <p class="testimonial-quote">
-                  "Llevo mis autos al taller de don Miguel hace años. Atención honesta, siempre te explican el detalle de lo que cambiaron y nunca cobran de más."
-                </p>
-              </div>
-              <div class="testimonial-author">
-                Cliente de Ñuñoa <span style="font-weight: 400; color: #6B7280;">· [CONFIRMAR NOMBRE]</span>
-              </div>
-            </div>
-
-            <!-- Espacio 2 -->
-            <div class="testimonial-card reveal-on-scroll">
-              <div>
-                <span class="testimonial-pending-note">[PENDIENTE: Reseña real 2 de Google Maps]</span>
-                <p class="testimonial-quote">
-                  "El escáner computarizado detectó una falla intermitente que otros talleres no encontraban. Rápido y muy amables en todo momento."
-                </p>
-              </div>
-              <div class="testimonial-author">
-                Cliente habitual <span style="font-weight: 400; color: #6B7280;">· [CONFIRMAR NOMBRE]</span>
-              </div>
-            </div>
-
-            <!-- Espacio 3 -->
-            <div class="testimonial-card reveal-on-scroll">
-              <div>
-                <span class="testimonial-pending-note">[PENDIENTE: Reseña real 3 de Google Maps]</span>
-                <p class="testimonial-quote">
-                  "Excelente el servicio de cambio de aceite y lavado mientras esperaba cerca. Da mucha tranquilidad encontrar un taller mecánico honesto."
-                </p>
-              </div>
-              <div class="testimonial-author">
-                Vecino de Pedro de Valdivia <span style="font-weight: 400; color: #6B7280;">· [CONFIRMAR NOMBRE]</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- FIN SECCIÓN TESTIMONIOS -->
 
       <!-- ======================================================================
            8. PREGUNTAS FRECUENTES (FAQ Acordeón)
@@ -600,7 +568,7 @@
                   Atendemos de lunes a viernes en horario continuado de <strong>8:30 a 18:00 hrs</strong>.
                 </p>
                 <p>
-                  Sábados: <em>[CONFIRMAR HORARIO DE ATENCIÓN DE FIN DE SEMANA]</em>. Te recomendamos escribirnos por WhatsApp previamente para coordinar la recepción de tu auto.
+                  Sábados y domingos permanecemos cerrados. Si nos escribes por WhatsApp fuera de horario, te respondemos apenas abramos para coordinar la recepción de tu auto.
                 </p>
               </div>
             </details>
@@ -648,7 +616,43 @@
               </summary>
               <div class="faq-answer">
                 <p>
-                  Un cambio de aceite y filtro habitual toma aproximadamente entre <strong>45 a 90 minutos</strong> <em>[CONFIRMAR TIEMPO EXACTO]</em>. Puedes aprovechar ese tiempo para encargar el lavado interior y exterior y retirar tu auto completamente listo.
+                  El tiempo depende de tu vehículo y del tipo de aceite y filtro. Al escribirnos te confirmamos cuánto demora y puedes aprovechar para encargar el lavado interior y exterior y retirar tu auto completamente listo.
+                </p>
+              </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="faq-item reveal-on-scroll">
+              <summary class="faq-question">
+                ¿Cuánto cuesta una mantención o una reparación?
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  El valor depende de tu modelo, del año y de los repuestos. Por eso <strong>te entregamos una cotización clara antes de cualquier trabajo</strong>: nada se hace sin que lo apruebes. Escríbenos por WhatsApp con la marca, modelo y año de tu auto.
+                </p>
+              </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="faq-item reveal-on-scroll">
+              <summary class="faq-question">
+                ¿Qué incluye el diagnóstico computarizado?
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Conectamos el escáner a tu auto, leemos los códigos de falla y los datos de los sensores del motor, y te explicamos qué significa cada resultado, qué es urgente reparar y qué puede esperar.
+                </p>
+              </div>
+            </details>
+
+            <!-- FAQ 8 -->
+            <details class="faq-item reveal-on-scroll">
+              <summary class="faq-question">
+                ¿En qué comunas atienden y cómo llego?
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Estamos en <strong>Av. Pedro de Valdivia 5439, Ñuñoa</strong> y recibimos autos de Ñuñoa, Providencia, Macul y Santiago. Más abajo, en la sección «Visítanos en Ñuñoa», encuentras el mapa.
                 </p>
               </div>
             </details>
@@ -670,7 +674,7 @@
             </p>
 
             <a 
-              href="https://wa.me/569XXXXXXXX?text=Hola%2C%20mi%20auto%20necesita%20mantenci%C3%B3n%2C%20%C2%BFtienen%20disponibilidad%3F" 
+              href="https://wa.me/56994078340?text=Hola%2C%20mi%20auto%20necesita%20mantenci%C3%B3n%2C%20%C2%BFtienen%20disponibilidad%3F" 
               class="btn btn-gold"
               target="_blank" 
               rel="noopener noreferrer"
@@ -682,6 +686,10 @@
               </svg>
               Escríbenos por WhatsApp
             </a>
+
+            <p class="cta-call">
+              ¿Prefieres llamar? <a href="tel:+56994078340" data-service="Llamada CTA Final">+56 9 9407 8340</a>
+            </p>
 
             <div class="closing-meta">
               <span><strong>Dirección:</strong> Av. Pedro de Valdivia 5439, Ñuñoa, Santiago</span>
@@ -726,7 +734,7 @@
                   <div class="location-detail-text">
                     <h4>Horario de Atención</h4>
                     <p>Lunes a viernes de 8:30 a 18:00 hrs</p>
-                    <p style="font-size: 0.875rem; color: #9CA3AF; margin-top: 0.25rem;">Sábados: [CONFIRMAR]</p>
+                    <p style="font-size: 0.875rem; color: #9CA3AF; margin-top: 0.25rem;">Sábados y domingos: cerrado</p>
                   </div>
                 </div>
 
@@ -737,8 +745,8 @@
                     </svg>
                   </div>
                   <div class="location-detail-text">
-                    <h4>WhatsApp Directo</h4>
-                    <p>+56 9 XXXX XXXX <span style="font-size: 0.8125rem; color: #F2B705;">[CONFIRMAR NÚMERO]</span></p>
+                    <h4>WhatsApp y teléfono</h4>
+                    <p><a href="tel:+56994078340" data-service="Llamada Ubicación">+56 9 9407 8340</a></p>
                   </div>
                 </div>
               </div>
@@ -760,7 +768,7 @@
                 </a>
 
                 <a 
-                  href="https://wa.me/569XXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20la%20ubicaci%C3%B3n%20y%20c%C3%B3mo%20llegar%20al%20taller" 
+                  href="https://wa.me/56994078340?text=Hola%2C%20quiero%20consultar%20por%20la%20ubicaci%C3%B3n%20y%20c%C3%B3mo%20llegar%20al%20taller" 
                   class="btn btn-gold"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -780,7 +788,15 @@
                 </svg>
               </div>
               <h3>Taller en Pedro de Valdivia 5439</h3>
-              <p>Fácil acceso en la comuna de Ñuñoa. Estacionamiento y recepción expedita para tu vehículo.</p>
+              <p>Fácil acceso en la comuna de Ñuñoa. Recepción expedita para tu vehículo.</p>
+              <iframe
+                class="map-embed"
+                title="Mapa de Miguel Gárate O. Servicio Automotriz en Av. Pedro de Valdivia 5439, Ñuñoa"
+                src="https://www.google.com/maps?q=Av.+Pedro+de+Valdivia+5439,+%C3%91u%C3%B1oa,+Santiago,+Chile&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
               
               <a 
                 href="https://www.google.com/maps/search/?api=1&query=Miguel+G%C3%A1rate+O.+Servicio+Automotriz%2C+Av.+Pedro+de+Valdivia+5439%2C+%C3%91u%C3%B1oa" 
@@ -833,9 +849,9 @@
             <h4>Contacto y Horario</h4>
             <ul>
               <li>Av. Pedro de Valdivia 5439, Ñuñoa</li>
-              <li>WhatsApp: +56 9 XXXX XXXX [CONFIRMAR]</li>
+              <li>WhatsApp: <a href="tel:+56994078340" data-service="Llamada Footer">+56 9 9407 8340</a></li>
               <li>Lunes a viernes: 8:30 a 18:00 hrs</li>
-              <li>Sábado: [CONFIRMAR]</li>
+              <li>Sábado y domingo: cerrado</li>
             </ul>
           </div>
         </div>
@@ -845,7 +861,7 @@
             &copy; <span id="current-year">2026</span> Miguel Gárate O. Servicio Automotriz. Todos los derechos reservados.
           </div>
           <div class="footer-credits">
-            Sitio desarrollado por <a href="#" target="_blank" rel="noopener noreferrer">Vortexia</a> <span>[CONFIRMAR SI SE DESEA MOSTRAR]</span>
+            Sitio desarrollado por Vortexia
           </div>
         </div>
       </div>
@@ -855,7 +871,7 @@
          12. BOTÓN FLOTANTE DE WHATSAPP
          ====================================================================== -->
     <a 
-      href="https://wa.me/569XXXXXXXX?text=Hola%2C%20quiero%20hacer%20una%20consulta%20sobre%20mi%20auto" 
+      href="https://wa.me/56994078340?text=Hola%2C%20quiero%20hacer%20una%20consulta%20sobre%20mi%20auto" 
       class="floating-whatsapp"
       target="_blank" 
       rel="noopener noreferrer"
@@ -869,6 +885,6 @@
     </a>
 
     <!-- Script de Funcionalidad -->
-    <script src="/script.js"></script>
+    <script src="/script.js" defer></script>
   </body>
 </html>

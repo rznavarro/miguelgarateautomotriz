@@ -242,6 +242,32 @@ h1, h2, h3, h4 {
   .header-btn span.btn-text-full {
     display: none;
   }
+  .header-btn span.btn-text-mobile {
+    display: inline;
+  }
+}
+
+.btn-text-mobile {
+  display: none;
+}
+
+.cta-call {
+  margin-top: 1rem;
+  color: #D1D5DB;
+}
+
+.cta-call a {
+  color: var(--color-gold);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.map-embed {
+  width: 100%;
+  height: 220px;
+  border: 0;
+  border-radius: 12px;
+  margin: 1rem 0;
 }
 
 /* ==========================================================================

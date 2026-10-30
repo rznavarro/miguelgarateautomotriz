@@ -7,9 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Configuración centralizada de WhatsApp
   // Para cambiar el número en toda la página, solo actualiza esta variable:
   const WHATSAPP_CONFIG = {
-    // [CONFIRMAR NÚMERO]: Reemplazar con el número real de WhatsApp de Miguel Gárate (ej: "56912345678")
-    number: "569XXXXXXXX",
-    displayNumber: "+56 9 XXXX XXXX"
+    number: "56994078340",
+    displayNumber: "+56 9 9407 8340"
   };
 
   // 2. Actualizar año en el footer automáticamente
@@ -81,15 +80,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Registro de conversiones / clicks en WhatsApp
-  document.querySelectorAll('a[href*="wa.me"]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const serviceName = btn.getAttribute('data-service') || 'General';
-      if (window.gtag) {
-        window.gtag('event', 'whatsapp_click', {
-          service: serviceName
-        });
-      }
+  // 6. Registro de conversiones / clicks en WhatsApp y llamadas
+  // (requiere cargar GA4 en index.html; sin gtag no hace nada)
+  const trackClick = (selector, eventName) => {
+    document.querySelectorAll(selector).forEach(btn => {
+      btn.addEventListener('click', () => {
+        const serviceName = btn.getAttribute('data-service') || 'General';
+        if (window.gtag) {
+          window.gtag('event', eventName, {
+            service: serviceName
+          });
+        }
+      });
     });
-  });
+  };
+  trackClick('a[href*="wa.me"]', 'whatsapp_click');
+  trackClick('a[href^="tel:"]', 'phone_click');
 });
