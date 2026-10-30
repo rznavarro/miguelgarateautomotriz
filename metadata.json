@@ -1,0 +1,6 @@
+{
+  "name": "Miguel Gárate O. Servicio Automotriz",
+  "description": "Taller mecánico y lavado de autos en Av. Pedro de Valdivia 5439, Ñuñoa. Más de 50 años de trayectoria cuidando tu auto con honestidad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
